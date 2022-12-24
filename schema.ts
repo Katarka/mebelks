@@ -8,9 +8,7 @@
 import {list} from '@keystone-6/core';
 import {allowAll} from '@keystone-6/core/access';
 import { cloudinaryImage } from '@keystone-6/cloudinary';
-import * as dotenv from 'dotenv'
 
-dotenv.config()
 
 // see https://keystonejs.com/docs/fields/overview for the full list of fields
 //   this is a few common fields for an example

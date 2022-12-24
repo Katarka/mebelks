@@ -1,9 +1,7 @@
 "use strict";
-var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
-var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __export = (target, all) => {
   for (var name in all)
@@ -17,10 +15,6 @@ var __copyProps = (to, from, except, desc) => {
   }
   return to;
 };
-var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
-  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
-  mod
-));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
 // keystone.ts
@@ -35,10 +29,8 @@ var import_core2 = require("@keystone-6/core");
 var import_core = require("@keystone-6/core");
 var import_access = require("@keystone-6/core/access");
 var import_cloudinary = require("@keystone-6/cloudinary");
-var dotenv = __toESM(require("dotenv"));
 var import_fields = require("@keystone-6/core/fields");
 var import_fields_document = require("@keystone-6/fields-document");
-dotenv.config();
 var lists = {
   User: (0, import_core.list)({
     access: import_access.allowAll,
