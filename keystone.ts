@@ -7,7 +7,7 @@ import {withAuth, session} from './auth';
 export default withAuth(
     config({
         server: {
-            cors: {origin: ['http://127.0.0.1:5173', 'https://oneeasyeye.space/'], credentials: true},
+            cors: {origin: ['http://127.0.0.1:5173', 'https://oneeasyeye.space', 'https://oneeasyeye.space/gallery'], credentials: true},
             port: 4000,
         },
         db: {
