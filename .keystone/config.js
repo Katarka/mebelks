@@ -140,12 +140,12 @@ var session = (0, import_session.statelessSessions)({
 var keystone_default = withAuth(
   (0, import_core2.config)({
     server: {
-      cors: { origin: ["http://127.0.0.1:5173"], credentials: true },
+      cors: { origin: ["http://127.0.0.1:5173", "https://oneeasyeye.space", "https://oneeasyeye.space/gallery"], credentials: true },
       port: 4e3
     },
     db: {
       provider: "postgresql",
-      url: "postgres://j69129535_mebel:lollipop55O!@postgresql.j69129535.myjino.ru/j69129535_mebel",
+      url: "postgres://postgres:22042204Q@65.21.56.211/ks",
       onConnect: async (context) => {
       }
     },
