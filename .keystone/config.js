@@ -1,7 +1,9 @@
 "use strict";
+var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
+var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __export = (target, all) => {
   for (var name in all)
@@ -15,6 +17,10 @@ var __copyProps = (to, from, except, desc) => {
   }
   return to;
 };
+var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
+  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
+  mod
+));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
 // keystone.ts
@@ -137,6 +143,8 @@ var session = (0, import_session.statelessSessions)({
 });
 
 // keystone.ts
+var dotenv = __toESM(require("dotenv"));
+dotenv.config();
 var keystone_default = withAuth(
   (0, import_core2.config)({
     server: {
@@ -145,7 +153,7 @@ var keystone_default = withAuth(
     },
     db: {
       provider: "postgresql",
-      url: "postgres://postgres:22042204Q@65.21.56.211/ks",
+      url: process.env.BD_CONNECTION,
       onConnect: async (context) => {
       }
     },

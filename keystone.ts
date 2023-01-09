@@ -4,6 +4,9 @@ import {lists} from './schema';
 
 import {withAuth, session} from './auth';
 
+import * as dotenv from 'dotenv'
+dotenv.config()
+
 export default withAuth(
     config({
         server: {
@@ -12,7 +15,7 @@ export default withAuth(
         },
         db: {
             provider: 'postgresql',
-            url: '',
+            url: process.env.BD_CONNECTION,
             onConnect: async context => {
             }
         },
